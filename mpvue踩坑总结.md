@@ -97,6 +97,7 @@
 
       ```
       - 地图(采用[vue-amap][6])，不多说，面向api编程
+      - 与app通信的window.webkit.messageHandlers.setAppTitleBar.postMessage在微信浏览器ios中会被拦截导致其他函数无法进行，个人理解是postMessage关键字有问题，采用navigator.userAgent判断一下，当微信浏览器打开时就不进行
       - 上下拉加载采用[betterscroll][7]封装一个[scroll组件进行slot][8],slot文章参考点左边
       - rpx采用less+[flexible][9]中@rpx代替，只需要把所有rpx换成@rpx即可，不懂的小伙伴可以去看一下rem相关
         ```css
