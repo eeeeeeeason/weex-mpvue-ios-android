@@ -1,0 +1,1 @@
+new Date(item.endDate.replace(/-/g, '/')).getTime() //ios中不能处理9999-09-09这一杠而是要换成'/'
