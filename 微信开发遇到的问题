@@ -5,3 +5,17 @@ app申请支付提供的截图中app尾页指的是具有公司版权信息的�
 app分享到小程序分享图片不能超过120k否则失败
 ios应用提交必须有独立的登录体系，比如账号密码或者手机加验证码，只有授权登录不能通过
 安卓目前360，应用宝都需要软件著作权，软件著作权在应用同名的情况下，公司不同也不能用。时间要大概3个月
+小程序获取的名称可能带有emoji
+```
+var regRule = /\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g;
+
+if(param.match(regRule)) {
+
+    param = param.replace(/\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, "");
+
+    console.log(param);alert("不支持表情");
+
+} 
+
+eason,👌👌
+```
